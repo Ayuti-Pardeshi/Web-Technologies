@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Passport Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-passport-container">
+            <h1>Passport Application Generator</h1>
+
+            <form id="passport-form">
+                <div class="form-group">
+                    <!-- All the input types -->
+                    <label for="text">User-Name:</label>
+                    <input type="text" id="text" name="text" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="url">URL:</label>
+                    <input type="url" id="url" name="url" required>
+
+                    <label for="tel">Telephone:</label>
+                    <input type="tel" id="tel" name="tel" required>
+
+                    <label for="number">Number:</label>
+                    <input type="number" id="number" name="number" required>
+
+                    <label for="range">Experience:</label>
+                    <input type="range" id="range" name="range" min="0" max="100" value="50">
+
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="datetime-local">Date and Time:</label>
+                    <input type="datetime-local" id="datetime-local" name="datetime-local">
+
+                    <label for="month">Month:</label>
+                    <input type="month" id="month" name="month">
+
+                    <label for="week">Week:</label>
+                    <input type="week" id="week" name="week">
+
+                    <label for="time">Time for application:</label>
+                    <input type="time" id="time" name="time">
+
+                    <label for="color">Color:</label>
+                    <input type="color" id="color" name="color">
+
+                    <label for="file">File:</label>
+                    <input type="file" id="file" name="file" accept="image/*" required>
+
+                    <label for="search">Search for content:</label>
+                    <input type="search" id="search" name="search">
+
+                    <label for="hidden">Hidden (won't be displayed):</label>
+                    <input type="hidden" id="hidden" name="hidden" value="hiddenValue">
+<br>
+                    <label>Gender:</label>
+                    <input type="radio" name="gender" value="Male"> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                    <input type="radio" name="gender" value="PN"> Prefer not to say
+<br><br><br>
+
+                    <label>Languages Known:</label>
+                    <input type="checkbox" name="languages" value="English"> English
+                    <input type="checkbox" name="languages" value="Hindi"> Hindi
+                    <input type="checkbox" name="languages" value="Marathi"> Marathi
+                    <input type="checkbox" name="languages" value="Other"> Other
+
+
+<br><br><br>
+                    <!-- Image radio buttons -->
+                    <label>Select Passport Type:</label>
+                    <div class="passport-type-selection">
+                        <label>
+                            <input type="radio" name="borderColor" value="red" required>
+                            <img src="white.jpeg" alt="Red Passport">
+                        </label>
+                        <label>
+                            <input type="radio" name="borderColor" value="green" required>
+                            <img src="blue.jpeg" alt="Green Passport">
+                        </label>
+                        <label>
+                            <input type="radio" name="borderColor" value="blue" required>
+                            <img src="red.jpeg" alt="Blue Passport">
+                        </label>
+                    </div>
+
+                    <button type="submit">Generate Passport</button>
+                    <input type="reset" value="Reset Form">
+                </div>
+            </form>
+
+            <div id="passport" class="passport">
+                <div class="passport-content">
+                    <div id="passport-photo" class="passport-photo"></div>
+                    <div class="passport-details">
+                        <p><strong>Name:</strong> <span id="passport-name"></span></p>
+                        <p><strong>Email:</strong> <span id="passport-email"></span></p>
+                        <p><strong>Website:</strong> <span id="passport-website"></span></p>
+                        <p><strong>Date of Birth:</strong> <span id="passport-dob"></span></p>
+                        <p><strong>Appointment:</strong> <span id="passport-appointment"></span></p>
+                        <p><strong>Favorite Color:</strong> <span id="passport-favColor"></span></p>
+                        <p><strong>Gender:</strong> <span id="passport-gender"></span></p>
+                        <p><strong>Languages Known:</strong> <span id="passport-languages"></span></p>
+                        <p><strong>Experience:</strong> <span id="passport-experience"></span> years</p>
+                    </div>
+                </div>
+                <button id="download-passport" type="button">Download Passport</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+</body>
+</html>
